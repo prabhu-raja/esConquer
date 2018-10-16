@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6🔥-5-{}</title>
+</head>
+<body>
+    
+    <script>
+        //  1️⃣ destructuring normal object 
+         const person = {
+            first: 'Vetri',
+            last: 'Vel',
+            country: 'Canada',
+            city: 'Brampton',
+            twitter: '@vv'
+        };
+        // const first = person.first;
+        // const last = person.last;
+        // Inspite of extracting objects as above use below.
+        const { first, last, twitter} = person;
+        // ------------------------------------------------------------------------------------------
+        // 2️⃣ destructuring deeply nested object
+        const zes = {
+            first: 'Vetri',
+            last: 'Vel',
+            links: {
+                social: {
+                    twitter: 'https://twitter.com/vv',
+                    facebook: 'https://facebook.com/vv.developer',
+                },
+                web: {
+                    blog: 'https://vv.com'
+                }
+            }
+        };
+        const { twitter:tweet, facebook:fb } = zes.links.social;
+        // ------------------------------------------------------------------------------------------
+        // 3️⃣ destructuring object with default values
+        const settings = { width: 100, color: 'black'}; // here we don't have height
+        const { width= 600, color= 'red', height = 800} = settings;
+        
+        
+    </script>
+
+</body>
+</html>

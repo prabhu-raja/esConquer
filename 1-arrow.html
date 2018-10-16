@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6🔥-1</title>
+</head>
+<body>
+    <script>
+        const names = ['Vetri', 'Sakthi', 'Muruga'];
+        const fullNames = names.map(function(firstName) {
+            return `${firstName} Vel🏹`;
+        });
+        // 
+        const fullNames2 = names.map((firstName) => {
+            return `${firstName} Vel🛳`;
+        });
+        // 
+        const fullNames3 = names.map(firstName => {
+            return `${firstName} Vel😇`;
+        });
+
+        // Implicitly returns
+        const fullNames4 = names.map(firstName => `${firstName} Vel🇨🇦`);
+        console.log(fullNames4);
+        //--------------------
+
+        // Implicitly returns object
+        const race = '100m';
+        const winners = ['Kutty', 'James', 'Peter' ];
+        //const win = winners.map((winner, i) => ({name: winner, race: race, place: i+1}));
+        // If it's a same object property and value name
+        const win = winners.map((winner, i) => ({name: winner, race, place: i+1}));
+        // ----------
+        
+        //Filter ex.
+        const ages = [223,33,44,55,77,11,99,56,23,];
+        const old = ages.filter(age => age>=50);
+        // -------
+
+        
+        
+    </script>
+</body>
+</html>

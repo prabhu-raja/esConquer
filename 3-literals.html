@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>6🔥-3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    
+    <script>
+        const dogs = [
+            { name: 'Snickers', age: 2 },
+            { name: 'Hugo', age: 8 },
+            { name: 'Sunny', age: 1 }
+        ];
+        // Looping
+        const markup = `
+            <ul class="dogs">
+                ${dogs.map(dog => 
+                    `<li>My ${dog.name}🐶 age is ${dog.age}</li>`).join('')}
+            </ul>
+        `;
+        document.body.innerHTML = markup;
+        
+        // If condition via Ternary operator
+        const song = {
+            name: 'Dying to live',
+            artist: 'Tupac'
+        };
+        const songMarkup = `
+            <div class="song">
+                <p>
+                    🎶${song.name} - 👩‍🎤${song.artist}
+                    ${song.featuring ? `(Featuring by ${song.featuring})` : ''}
+                </p>
+
+            </div>
+        `;
+
+        // TODO functions
+        function renderKeywords(keywords) {
+            return `
+                <ul>${keywords.map(keyword => `
+                    <li>🍺${keyword}</li>
+                `).join('')}
+                </ul>
+            `;
+        }
+            
+        const beer = {
+            name: 'Belgian Wit',
+            brewery: 'Steam Whistle Brewery',
+            keywords: ['pale', 'cloudy', 'spiced', 'crisp']
+        };
+        
+        const markupBeer = `
+        <div class="beer">
+            <h2>${beer.name}</h2>
+            <p class="brewery">${beer.brewery}</p>
+            ${renderKeywords(beer.keywords)}
+        </div>
+        `;
+        document.body.innerHTML += markupBeer;
+
+
+
+    </script>
+    
+</body>
+</html>
