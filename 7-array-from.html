@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>7🔥-[]-from</title>
+</head>
+<div class="directions">
+    <p>North</p>
+    <p>South</p>
+    <p>West</p>
+    <p>East</p>
+</div>
+<body>
+
+    <script>
+        // For Ref what is NodeList
+        // https://www.w3schools.com/js/js_htmldom_nodelist.asp
+        const dir = document.querySelectorAll('.directions p');
+        console.log('sdf', dir); // It returns a NodeList not an array
+        const dirArr = Array.from(dir);
+        const dirs = dirArr.map(abc => abc.textContent);
+        console.log(dirs);
+
+        // instead of doing map in 2nd line -> 2nd arg of Array.from is map
+
+        Array.from(dir, abc => {
+            console.log('✈️', abc.textContent);
+        });
+        
+
+    </script>
+</body>
+</html>
