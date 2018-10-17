@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6🔥-6-for-in</title>
+</head>
+<body>
+    <script>
+        const ball = {
+            game: 'cricket',
+            color: 'white',
+            price: 250
+        };
+
+        for (const testKey in ball) {
+            if (ball.hasOwnProperty(testKey)) {
+                const element = ball[testKey];
+                console.log(testKey, element);
+            }
+        }
+    </script>
+</body>
+</html>
