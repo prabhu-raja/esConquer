@@ -8,6 +8,21 @@
 </head>
 <body>
     <script>
+        function convertCurrency(amount) {
+            const converted = {
+                USD: amount * 0.30,
+                GPB: amount * 0.53,
+                AUD: amount * 1.01,
+                MEX: amount * 13.30
+            }
+            return converted;
+        }
+
+        const rum = convertCurrency(100);
+        console.log(rum);
+        const { USD, AUD } = convertCurrency(10);
+        console.log('💲', USD, AUD);
+
     </script>
 </body>
 </html>
