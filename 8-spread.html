@@ -7,6 +7,12 @@
     <title>6🔥-8-...</title>
 </head>
 <body>
+    <div class="characters">
+        <p>Tom</p>
+        <p>Jerry</p>
+        <p>Popeyes</p>
+    </div>
+
     <script>
         const featured = ['Deep Dish', 'Pepperoni', 'Hawaiian'];
         const specialty = ['Meatzza', 'Spicy Mama', 'Margherita'];
@@ -24,6 +30,18 @@
         const fridayPizzas = [...pizzas];
         fridayPizzas[0] = '😎';
         console.log('🤩', pizzas, fridayPizzas); // now we overwrote to the initial pizzas too. we referenced here.. so follow the below step
+
+
+        // Exercise 2
+        //const chars = Array.from(document.querySelectorAll('.characters p'));
+        // instead of using Array.from use spread operator
+        const chars = [...document.querySelectorAll('.characters p')];
+        chars.map(char => console.log('🐱🐭', char.textContent));
+
+
+
+
+
 
     </script>
 </body>
