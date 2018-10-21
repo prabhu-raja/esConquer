@@ -39,7 +39,13 @@
         chars.map(char => console.log('🐱🐭', char.textContent));
 
         // Exercise 3
-        
+        const allBiryanis = ['🐓Biryani', '🐐Biryani', '🦐Biryani'];
+        const vegBiryanis =['🥗Biryani', '🍄Biryani'];
+        // If you wanna push veg to allBiryani's without adding a new const
+        allBiryanis.push(vegBiryanis); //["🐓Biryani", "🐐Biryani", "🦐Biryani", Array(2)]
+
+        //so without making and sub array
+        allBiryanis.push(...vegBiryanis); //["🐓Biryani", "🐐Biryani", "🦐Biryani", Array(2), "🥗Biryani", "🍄Biryani"]
 
 
 
