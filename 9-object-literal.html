@@ -40,6 +40,22 @@
         }
         // 🔥 results {firstName: "Tiger", last: "Sam", age: 2, breed: "Labrador", owner: "Peter"}
 
+        //Exercise 2
+        const key = 'pocketColor'
+        const value = '#ffc688';
+        const tShirt = {
+            [key]: value
+        };
+        // 🔥 results: {pocketColor: "#ffc688"}
+
+        //If more dynamic
+        const skey = 'pocketColor'
+        const svalue = '#ffc688';
+        const sleeveShirt = {
+            [`Left${skey}`]: svalue
+        };
+        // 🔥 results: {LeftpocketColor: "#ffc688"}
+
 
 
     </script>
