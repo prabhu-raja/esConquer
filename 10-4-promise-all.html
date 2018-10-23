@@ -8,7 +8,8 @@
 </head>
 <body>
     <script>
-
+        
+        /* Exercise 1️⃣
         const weather = new Promise(resolve => {
             setTimeout(() => {
                 resolve({ temp: 29, conditions: '☀️ with 🌥'});
@@ -27,7 +28,21 @@
                 const [weatherInfo, tweetInfo] = responses;
                 console.log(weatherInfo, tweetInfo);
             });
-            
+
+        */    
+
+        // Exercise 2️⃣
+        const postsPromise = fetch('https://wesbos.com/wp-json/wp/v2/posts');
+        const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
+
+        Promise
+            .all([postsPromise, streetCarsPromise])
+            .then(responses => {
+                return Promise.all(responses.map(res => res.json()))
+            })
+            .then(response => {
+                console.log('😎', response);
+            });
     </script>
 </body>
 </html>
