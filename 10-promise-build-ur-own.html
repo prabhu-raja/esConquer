@@ -9,10 +9,14 @@
 <body>
     <script>
         const pro = new Promise((resolve, reject) => {
-            resolve('Im so 🆒😎');
+            setTimeout(() => {
+                resolve('Im not 🆒😎');
+            }, 1000);
         });
 
-        pro.then(data => console.log(data));
+        pro
+            .then(data => console.log(data))
+            .catch(err => console.log(err));
     </script>
 </body>
 </html>
