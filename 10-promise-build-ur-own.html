@@ -10,7 +10,7 @@
     <script>
         const pro = new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve('Im not 🆒😎');
+                reject(Error('Im not 🆒😎'));
             }, 1000);
         });
 
