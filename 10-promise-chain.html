@@ -19,10 +19,13 @@
             { name: 'Chris Coyier', twitter: '@chriscoyier', bio: 'CSS Tricks and CodePen' },
             { name: 'Addy Osmani', twitter: '@addyosmani', bio: 'Googler' },
         ];
-
+        
+        // create a new promise
         function getPostById(id) {
             return new Promise((resolve, reject) => {
+                // using setTimeout to mimick a database 😎
                 setTimeout(() => {
+                    // 🕵🏻‍ the post we want
                     const post = posts.find(objPost => objPost.id === id);
                     if(post) {
                         resolve(post);
@@ -44,7 +47,17 @@
                 }
             });
         }
-
+        
+        getPostById(1)
+            .then(oPost => {
+                return hydrateAuthor(oPost);
+            })
+            .then(oAuthor => {
+                console.log('✍️', oAuthor);
+            })
+            .catch(err => {
+                console.error('🤬', err);
+            });
         
     </script>
 </body>
