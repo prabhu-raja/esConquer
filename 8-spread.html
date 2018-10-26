@@ -47,6 +47,20 @@
         //so without making and sub array
         allBiryanis.push(...vegBiryanis); //["🐓Biryani", "🐐Biryani", "🦐Biryani", Array(2), "🥗Biryani", "🍄Biryani"]
 
+        // My Own Exercise
+        const responseOffers = {
+            maestroID: "503229643",
+            name: "Ignite TV Box",
+            offerID: "sku411138",
+            offerPrice: {price: 10, priceFrequency: "monthly", boosterPoints: 0},
+            oneTimePrice: {price: 0, priceFrequency: "monthly", boosterPoints: 0},
+            quantity: 0
+        }
+
+       
+        const {offerID: oid, maestroID} = responseOffers;
+        const {hwDetail.offerID, hwDetail.quantity} = responseOffers;
+
 
 
 
