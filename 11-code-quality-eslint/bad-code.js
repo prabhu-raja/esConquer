@@ -1,3 +1,4 @@
+/* globals twttr ga */
 
 const weather = new Promise((resolve) => {
   setTimeout(() => {
@@ -27,3 +28,6 @@ Promise
   .then((responses) => {
     console.log(responses);
   });
+
+ga.track();
+twttr.trackConversion();
