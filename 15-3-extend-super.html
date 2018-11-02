@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6🔥-15-extend-super</title>
+</head>
+<body>
+    <script>
+        class Animal {
+            constructor(name) {
+                this._name  = name;
+                this._thirst = 100;
+                this._belly = [];
+            }
+            drink() {
+                this._thirst -= 10;
+                return this._thirst;
+            }
+            eat(food) {
+                this._belly.push(food);
+                return this._belly;
+            }
+        }
+        //
+        class Dog extends Animal {
+            constructor(name, breed) {
+                //this._name = name;
+                super(name);
+                this._breed = breed;
+            }
+            bark() {
+                return `I'm a 🐕`;
+            }
+        }
+
+        const rhino = new Animal('Rhiney');
+        const snickers = new Dog('Snickers', 'King Charles');
+
+    </script>
+</body>
+</html>
