@@ -19,6 +19,21 @@
             cuddles() {
                 console.log('love you owner!');
             }
+            static info() {
+                console.log('A 🐕 is better than 🐈');
+            }
+            get description() {
+                return `${this._name} is a ${this._breed} type of dog`;
+            }
+
+            set nickName(val) {
+                this.nick = val;
+            }
+
+            get nickName() {
+                return this.nick;
+            }
+            
         }
         const snick = new Dog('Snickers', 'King Charles');
         const sunny = new Dog('Sunny', 'Golden Doodle');
