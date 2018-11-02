@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6🔥-prototypal</title>
+</head>
+<body>
+    <script>
+        function Dog(name, breed) {
+            this._name = name;
+            this._breed = breed;
+        }
+        Dog.prototype.bark = function() {
+            console.log(`bark bark my name is ${this._name}`);
+        }
+
+        const snick = new Dog('Snickers', 'King Charles');
+        const sunny = new Dog('Sunny', 'Golden Doodle');
+
+        Dog.prototype.bark = function() {
+            console.log('Im different 🦖');
+        }
+        
+    </script>
+</body>
+</html>
