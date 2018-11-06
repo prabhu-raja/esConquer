@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>6🔥-20-2-custompromise</title>
 </head>
-<video controls class="handsome"></video>
 <body>
     <script>
         function breathe(amount) {
@@ -18,8 +17,18 @@
                     resolve(`Done for ${amount} ms value`);
                 }, amount);
             });
-            
         }
+        async function go() {
+            const res = await(breathe(600));
+            console.log(res);
+            const res1 = await(breathe(800));
+            console.log(res1);
+            const res2 = await(breathe(3000));
+            console.log(res2);
+            const res3 = await(breathe(2000));
+            console.log(res3);
+        }
+        go();
     </script>
 </body>
 </html>
