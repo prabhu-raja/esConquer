@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6🔥-20-nativepromise</title>
+</head>
+<video controls class="handsome"></video>
+<body>
+    <script>
+        fetch('https://api.github.com/users/prabhu-raja')
+            .then(res => {
+                return res.json();
+            })
+            .then(res => {
+                console.log(res);
+            })
+        
+        const vdeo = document.querySelector('.handsome');
+        navigator.mediaDevices.getUserMedia({video: true})
+            .then(ms => {
+                console.log(ms);
+                vdeo.srcObject = ms;
+                vdeo.load();
+                vdeo.play();
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    </script>
+</body>
+</html>
