@@ -8,13 +8,38 @@
 </head>
 <body>
   <script>
+    // Example 1
     var age = 100;
     if(age > 11) {
-      let dogYears = age * 8; // Here var scpoed to the block
-      console.log('🐶let-inside', dogYears);
+      var dogYears = age * 8;
+      // let dogYears = age * 8; 
+      // console.log('🐶let-inside', dogYears);
     }
-    console.log('🐶let-outside', dogYears);
+    // console.log('🐶let-outside', dogYears);
 
+    // Example 2
+    let points = 30;
+    var winner = false;
+    if(points < 50) {
+      var winner = true;
+      console.log('🥇- Block',winner); 
+    }
+    console.log('🥇- Global',winner);
+
+    // Let vs Const
+    // let - mutuable -> can be update 
+    // const - immutable -> can not be update
+    const person = {
+      name: 'PR',
+      age: 37
+    }
+    console.log('Age - Before', person.age);
+    person.age = 24;
+    console.log('Age - After', person.age);
+    const jogs = Object.freeze(person);
+    console.log('Jogs - Before', jogs.age);
+    jogs.age = 88;
+    console.log('Jogs - After', jogs.age);
   </script>
 </body>
 </html>
