@@ -40,6 +40,25 @@
     console.log('Jogs - Before', jogs.age);
     jogs.age = 88;
     console.log('Jogs - After', jogs.age);
+
+
+    // Another example for let vs var
+
+    for(var i = 0; i < 5; i++) {
+      console.log(i);
+      setTimeout(() => {
+        console.log('Value of i from var is ', i);
+      }, 1000);
+    }
+
+    for(let i = 0; i < 5; i++) {
+      console.log(i);
+      setTimeout(() => {
+        console.log('Value of i from let is ', i);
+      }, 1000);
+    }
+
+
   </script>
 </body>
 </html>
