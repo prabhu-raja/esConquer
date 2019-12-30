@@ -26,14 +26,15 @@
       console.log('Hello');
     }
 
-    // js compiler converts our prgram
+    // How js compiler converts our prgram
     function hoist() {
       console.log('Hello');
     }
     hoist();
     */
 
-    // * Hoisting var with in a function
+    /* Example 3
+    // Hoisting var with in a function
     var price = 1000;
     believer();
     function believer() {
@@ -42,6 +43,25 @@
       console.log('👍', price);
     }
     console.log('👏', price);
+    */
+
+    /*Example 4
+    // function expressions not hoisted
+    healthy();
+    var healthy = function() {
+      console.log('🥕');
+    }
+    */
+
+    // /*Example 5
+    // combination of both function declaration & expressions
+    healthy();
+    var healthy = function carrot() {
+      console.log('🥕');
+    }
+    // */
+
+    
 
   </script>
 </body>
