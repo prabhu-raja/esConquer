@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>6🔥-test</title>
+</head>
+<body>
+    <script>
+        function testPr() {
+            const carPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
+            const carValue = carPromise
+                    .then(data => data.json())
+                    .then(res => res);
+            return carValue;
+        }
+        const fromPr = testPr().then(result => result);
+        
+       async function testAA() {
+           const px = await fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
+           const dummy = await px.json();
+           debugger;
+           return dummy;
+       }
+       const fromAsy = testAA();
+
+    </script>
+</body>
+</html>
