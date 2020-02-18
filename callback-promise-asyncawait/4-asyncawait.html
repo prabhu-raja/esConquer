@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>promise</title>
+</head>
+<body>
+  <script>
+    function getUserById(id) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve({
+            id,
+            name: 'Marckenz'
+          });
+        }, 1000);
+      });
+    }
+
+    function getPostsByUser(userName) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(['post1', 'post2', 'post3']);
+        }, 1000);
+      });
+    }
+
+    function getCommentByPost(post) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(`This is the comment for ${post}`);
+        }, 1000);
+      });
+    }
+
+    // getUserById(1)
+    //   .then(usr => {
+    //     console.log('1 - ', usr);
+    //     return getPostsByUser(usr.name);
+    //   })
+    //   .then(posts => {
+    //     console.log('2 - ', posts);
+    //     return getCommentByPost(posts[1])
+    //   })
+    //   .then(comment => console.log('3 - ', comment))
+    //   .catch(err => console.log(err));
+
+    async function getComment() {
+      try {
+        const usr = await getUserById(1);
+        console.log('1 - ', usr);
+        const posts = await getPostsByUser(usr.name);
+        console.log('2 - ', posts);
+        const comment = await getCommentByPost(posts[1]);
+        console.log('3 - ', comment);
+      } catch (error) {
+        console.log(`Error - ${error}`);
+      }
+    }
+
+    getComment();
+  </script>
+</body>
+</html>
