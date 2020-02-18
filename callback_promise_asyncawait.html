@@ -8,13 +8,15 @@
 <body>
   <script>
     const getPost = () => {
-      return {
-        title: 'My Call backs'
-      }
+      setTimeout(() => {
+        return {
+          title: 'My Call backs'
+        }
+      }, 3000);
     };
 
     const obj = getPost();
-    console.log(obj);
+    console.log(obj); // undefined
 
 
   </script>
