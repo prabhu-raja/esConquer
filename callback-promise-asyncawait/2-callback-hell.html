@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>callback hell</title>
+</head>
+<body>
+  <script>
+    function getUserById(id, cbFn) {
+      setTimeout(() => {
+        cbFn({
+          id,
+          name: 'Marckenz'
+        });
+      }, 1000);
+    }
+
+    function getPostsByUser(userName, cbFn) {
+      setTimeout(() => {
+        cbFn(['post1', 'post2', 'post3']);
+      }, 1000);
+    }
+
+    function getCommentByPost(post, cbFn) {
+      setTimeout(() => {
+        cbFn(`This is the comment for ${post}`);
+      }, 1000);
+    }
+
+    getUserById(1, usr => {
+      console.log('1 - ', usr);
+      getPostsByUser(usr.name, posts => {
+        console.log('2 - ', posts);
+        getCommentByPost(posts[1], comment => {
+          console.log('3 - ', comment);
+        })
+      })
+    });
+  </script>
+</body>
+</html>
