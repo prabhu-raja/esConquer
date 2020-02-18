@@ -7,7 +7,22 @@
 </head>
 <body>
   <script>
-    // *  Callback simple example
+
+    /*
+    // without callback
+    const getPost = () => {
+      setTimeout(() => {
+        return {
+          title: 'My Call backs'
+        };
+      }, 2000);
+    };
+
+    const obj = getPost();
+    console.log(obj); //undefined
+    */
+
+    // with callback
     const getPost = (cbFun) => {
       setTimeout(() => {
         cbFun({
@@ -18,7 +33,8 @@
 
     getPost(val => {
       console.log('val - ', val);
-    })
+    });
+    
 
     
 
